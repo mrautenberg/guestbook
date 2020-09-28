@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+    background: rgb(21, 92, 142);
+    background: linear-gradient(90deg, rgba(21, 92, 142, 1) 9%, rgba(35, 112, 147, 1) 67%);
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro {
+    min-height: 14vh;
+}
+
+.intro-header {
+    margin: 0.3em 0;
+}
+
+.intro h1 {
+    font-size: 2.8rem;
+}
+
+/* INPUT */
+.add-message {
+    width: 60%;
+    min-height: 30vh;
+}
+
+.add-message label,
+.add-message input,
+.add-message textarea,
+.add-message button {
+    display: block;
+    width: 100%;
+    margin: 0.8em 0;
+    font-size: 1.3rem;
+    font-family: inherit;
+}
+
+.add-message label,
+.add-message input,
+.add-message textarea {
+    padding: 0.3em;
+    border-radius: 3px;
+    border: none;
+}
+
+.submit-btn {
+    cursor: pointer;
+    padding: 0.5em;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #f05627;
+    border: none;
+}
+
+.submit-btn:hover {
+    opacity: 0.8;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+.message {
+    min-height: 50vh;
+}
+
+.message-header {
+    border-bottom: 3px solid #f05627;
+    margin: 1em 0;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 700px) {
+    .container {
+        width: 100%;
+    }
+
+    .add-message {
+        width: 80%;
+    }
+}

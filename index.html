@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Guestbook</title>
+    </head>
+    <body>
+        <header class="container row intro">
+            <h1 class="intro-header">Guestbook</h1>
+        </header>
+
+        <main class="container row">
+            <form class="add-message">
+                <label for="name">Name (required)</label>
+                <input class="name" type="text" />
+                <label for="message">Message (required)</label>
+                <textarea class="message-input" name="message" cols="10" rows="10"></textarea>
+                <button class="submit-btn" type="submit">SEND</button>
+            </form>
+            <div class="message-container">
+                <h2 class="message-header">Posts</h2>
+                <ul class="message-list"></ul>
+                <!-- <div>Name, Message, timestamp</div> -->
+            </div>
+        </main>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"
+            integrity="sha512-F+u8eWHrfY8Xw9BLzZ8rG/0wIvs0y+JyRJrXjp3VjtFPylAEEGwKbua5Ip/oiVhaTDaDs4eU2Xtsxjs/9ag2bQ=="
+            crossorigin="anonymous"
+        ></script>
+        <script src="./app.js"></script>
+    </body>
+</html>
