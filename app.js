@@ -1,13 +1,14 @@
 // DATE FNS LIBRARY
 
 // Variables
-const name = document.querySelector(".name");
-const message = document.querySelector(".message-input");
+const name = document.querySelector("#name");
+const message = document.querySelector("#message");
 const messageList = document.querySelector(".message-list");
-const submitBtn = document.querySelector(".submit-btn");
+const submitBtn = document.querySelector("#submit-btn");
 
 // Functions
-const addMessage = (e) => {
+
+function addMessage(e) {
     e.preventDefault();
 
     // Add datetime somehow!
@@ -33,7 +34,7 @@ const addMessage = (e) => {
     message.value = "";
 
     console.log(newMessage);
-};
+}
 
 // Event Listeners
 submitBtn.addEventListener("click", addMessage);

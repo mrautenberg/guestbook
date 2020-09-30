@@ -7,23 +7,35 @@
         <title>Guestbook</title>
     </head>
     <body>
-        <header class="container row intro">
-            <h1 class="intro-header">Guestbook</h1>
+        <header class="intro-section">
+            <div class="container">
+                <h1 class="intro-header row">Guestbook</h1>
+            </div>
         </header>
 
         <main class="container row">
             <form class="add-message">
                 <label for="name">Name (required)</label>
-                <input class="name" type="text" />
+                <input id="name" class="name" type="text" required />
                 <label for="message">Message (required)</label>
-                <textarea class="message-input" name="message" cols="10" rows="10"></textarea>
-                <button class="submit-btn" type="submit">SEND</button>
+                <textarea
+                    id="message"
+                    class="message"
+                    name="message"
+                    cols=""
+                    rows="6"
+                    required
+                ></textarea>
+                <button id="submit-btn" class="submit-btn" type="submit">SEND</button>
             </form>
-            <div class="message-container">
-                <h2 class="message-header">Posts</h2>
-                <ul class="message-list"></ul>
-                <!-- <div>Name, Message, timestamp</div> -->
-            </div>
+
+            <section class="container row">
+                <div class="messege-container">
+                    <h2 class="message-header">Posts</h2>
+                    <ul class="message-list"></ul>
+                    <!-- <div>Name, Message, timestamp</div> -->
+                </div>
+            </section>
         </main>
 
         <script
