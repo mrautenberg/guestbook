@@ -1,5 +1,3 @@
-// DATE FNS LIBRARY
-
 // Variables
 const name = document.querySelector("#name");
 const message = document.querySelector("#message");
@@ -7,23 +5,25 @@ const messageList = document.querySelector(".message-list");
 const submitBtn = document.querySelector("#submit-btn");
 
 // Functions
-
-function addMessage(e) {
+const addMessage = (e) => {
     e.preventDefault();
 
-    // Add datetime somehow!
+    // Time since posted with DateFns
     const now = new Date();
-    const month = now.getMonth();
-    const day = now.getDate();
-    const hour = now.getHours();
-    const minutes = now.getMinutes();
+    const before = new Date("Oct 1 2020 10:00:00");
+    const timeSince = dateFns.distanceInWords(now, before, { addSuffix: true });
+    console.log(timeSince);
+
+    // Check if empty to not sign out empty string!
 
     // Input values from form fields
-    const input = `${name.value}: ${message.value} (${day}/${month} at ${hour}:${minutes}) `;
+    const html = `
+    ${name.value} wrote: ${message.value} (${timeSince}) 
+  `;
 
     // creating a new LI
     const newMessage = document.createElement("li");
-    newMessage.innerText = input;
+    newMessage.innerText = html;
     newMessage.classList.add("new-message");
 
     // Append new message to list of messages
@@ -34,7 +34,9 @@ function addMessage(e) {
     message.value = "";
 
     console.log(newMessage);
-}
+};
+
+// Also possible to add to local storage
 
 // Event Listeners
 submitBtn.addEventListener("click", addMessage);

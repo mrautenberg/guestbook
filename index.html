@@ -16,16 +16,19 @@
         <main class="container row">
             <form class="add-message">
                 <label for="name">Name (required)</label>
-                <input id="name" class="name" type="text" required />
+                <div class="input-control">
+                    <input id="name" class="name" type="text" />
+                </div>
                 <label for="message">Message (required)</label>
-                <textarea
-                    id="message"
-                    class="message"
-                    name="message"
-                    cols=""
-                    rows="6"
-                    required
-                ></textarea>
+                <div class="input-control">
+                    <textarea
+                        id="message"
+                        class="message"
+                        name="message"
+                        cols="5"
+                        rows="6"
+                    ></textarea>
+                </div>
                 <button id="submit-btn" class="submit-btn" type="submit">SEND</button>
             </form>
 
